@@ -31,6 +31,23 @@ Have added the Lambda code in the repository
 ## Setting up API Gateway
 ![image](https://github.com/user-attachments/assets/00fb9f12-ea7b-43ed-a1f9-19ab5cc73601)
 
+## IAM Policy
+
+![image](https://github.com/user-attachments/assets/20374152-b363-43b2-bf3f-03216bddef8e)
+
+## Reflection 
+
+Throughout this project, I had 2 good outcomes which helped me learn more about lambda
+
+An interesting aspect of this project was completing it entirely within the AWS Free Tier.
+
+1. Permission Configuration
+One of the initial hurdles I faced was correctly configuring the IAM permissions. When I first deployed the Lambda function, I overlooked the importance of setting up the proper permissions for accessing DynamoDB. This led to "Access Denied" errors. To resolve this issue, I had to dive deeper into AWS IAM policies. I learned about the principle of least privilege and how to create a custom IAM policy that granted only the necessary permissions to my Lambda function.
+
+2. Error Handling
+As I developed the application, I realized the need for error handling. My initial implementation lacked comprehensive error management, which made debugging difficult and would have provided a poor user experience in a production environment. I addressed this by implementing more thorough try-except blocks, adding detailed logging, and ensuring that the API returned appropriate HTTP status codes along with descriptive error messages.
+
+
 
 
 
