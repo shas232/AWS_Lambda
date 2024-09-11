@@ -1,8 +1,11 @@
-POST
+##Testing URL's
+
+#POST
+
 ![image](https://github.com/user-attachments/assets/48933e70-a0a5-4789-af4f-72b60f947cb6)
 ![image](https://github.com/user-attachments/assets/f2813c8f-9bf6-40a3-8deb-4f4229599141)
 
-PUT
+#PUT
 ![image](https://github.com/user-attachments/assets/ce7b4cd3-ca2b-4125-a09a-6cdb41314d9a)
 ![image](https://github.com/user-attachments/assets/303791ab-9517-4148-bed3-c9b9504ba7c7)
  
