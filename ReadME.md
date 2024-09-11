@@ -20,7 +20,7 @@
 ## Setting up Lambda 
 ![image](https://github.com/user-attachments/assets/f0f461bb-9869-48ac-bd41-ba6fa21632ac)
 
-Have added the Lambda code in the repository 
+Setup function named: StudentRecordHandler. Used the lambda.py for the CRUD operations
 
 ## Setting up DynamoDB
 
@@ -28,8 +28,12 @@ Have added the Lambda code in the repository
 ![image](https://github.com/user-attachments/assets/767220f4-9abd-4cbc-9b38-ef4fc28ccd8f)
 ![image](https://github.com/user-attachments/assets/090c58f9-a1f8-406d-a99f-e085c74be355)
 
+Created a table in DynamoDb named StudentRecords and student_id as a primary key
+
 ## Setting up API Gateway
 ![image](https://github.com/user-attachments/assets/00fb9f12-ea7b-43ed-a1f9-19ab5cc73601)
+
+https://f7xphuzmw3.execute-api.us-east-2.amazonaws.com/dev/students
 
 ## IAM Policy
 
