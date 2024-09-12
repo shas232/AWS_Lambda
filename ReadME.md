@@ -1,4 +1,28 @@
-# Testing URL's
+## Setting up Lambda 
+![image](https://github.com/user-attachments/assets/f0f461bb-9869-48ac-bd41-ba6fa21632ac)
+
+To handle the logic for CRUD operations, I created a Lambda function named StudentRecordHandler. This function processes all incoming requests to the API and interacts with DynamoDB to create, read, update, and delete student records. The lambda.py file contains the actual code that performs these operations
+
+## Setting up DynamoDB
+
+![image](https://github.com/user-attachments/assets/fce10a86-8acb-4a31-b2c6-de7acf415723)
+![image](https://github.com/user-attachments/assets/767220f4-9abd-4cbc-9b38-ef4fc28ccd8f)
+![image](https://github.com/user-attachments/assets/090c58f9-a1f8-406d-a99f-e085c74be355)
+
+I set up a DynamoDB table named StudentRecords, with student_id as the primary key. This ensures each student record has a unique identifier. DynamoDB was chosen because of its scalability and integration with AWS services like Lambda. Every operation (POST, GET, PUT, DELETE) interacts with this table to manage student data effectively.
+
+## Setting up API Gateway
+![image](https://github.com/user-attachments/assets/00fb9f12-ea7b-43ed-a1f9-19ab5cc73601)
+
+API Gateway acts as the front door for the student record application. I created a new API with endpoints for each CRUD operation and connected it to the Lambda function. https://f7xphuzmw3.execute-api.us-east-2.amazonaws.com/dev/students
+
+## IAM Policy
+
+![image](https://github.com/user-attachments/assets/20374152-b363-43b2-bf3f-03216bddef8e)
+
+When setting up Lambda, I had to create an IAM policy to grant the function the necessary permissions. This policy ensures that the Lambda function can read and write to the DynamoDB table, without giving it any excess permissions.
+
+## Testing URL's
 
 ## POST
 
@@ -24,31 +48,6 @@ The GET method retrieves a student’s record based on their ID. You’ll send a
 ![image](https://github.com/user-attachments/assets/e5c04a90-ae85-4e78-a281-c4eb6971e10f)
 
 The DELETE method removes a student’s record from the system. To delete a record, simply make a DELETE request to the API with the student ID in the URL. If the record is successfully deleted, you'll receive a confirmation response.
-
-## Setting up Lambda 
-![image](https://github.com/user-attachments/assets/f0f461bb-9869-48ac-bd41-ba6fa21632ac)
-
-To handle the logic for CRUD operations, I created a Lambda function named StudentRecordHandler. This function processes all incoming requests to the API and interacts with DynamoDB to create, read, update, and delete student records. The lambda.py file contains the actual code that performs these operations
-
-## Setting up DynamoDB
-
-![image](https://github.com/user-attachments/assets/fce10a86-8acb-4a31-b2c6-de7acf415723)
-![image](https://github.com/user-attachments/assets/767220f4-9abd-4cbc-9b38-ef4fc28ccd8f)
-![image](https://github.com/user-attachments/assets/090c58f9-a1f8-406d-a99f-e085c74be355)
-
-I set up a DynamoDB table named StudentRecords, with student_id as the primary key. This ensures each student record has a unique identifier. DynamoDB was chosen because of its scalability and integration with AWS services like Lambda. Every operation (POST, GET, PUT, DELETE) interacts with this table to manage student data effectively.
-
-
-## Setting up API Gateway
-![image](https://github.com/user-attachments/assets/00fb9f12-ea7b-43ed-a1f9-19ab5cc73601)
-
-API Gateway acts as the front door for the student record application. I created a new API with endpoints for each CRUD operation and connected it to the Lambda function. https://f7xphuzmw3.execute-api.us-east-2.amazonaws.com/dev/students
-
-## IAM Policy
-
-![image](https://github.com/user-attachments/assets/20374152-b363-43b2-bf3f-03216bddef8e)
-
-When setting up Lambda, I had to create an IAM policy to grant the function the necessary permissions. This policy ensures that the Lambda function can read and write to the DynamoDB table, without giving it any excess permissions.
 
 ## Reflection 
 
